@@ -1,7 +1,5 @@
-print("""
-    This script is run when a users uninstalls the package.
-    
-    It will not run during an update.
-    Here you should purge all the files you installed with your install script.
-    Do not nuke the system.
-""")
+be.based.run("rm /etc/camera.d/config.toml /etc/camera.d/presets/high.toml /bin/shutdown.lja /bin/shutdown.py")
+be.based.run("rmdir /etc/camera.d/presets")
+be.based.run("rmdir /etc/camera.d")
+
+be.api.setvar("return", "0")
