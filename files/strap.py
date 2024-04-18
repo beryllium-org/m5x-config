@@ -14,3 +14,5 @@ shutil.copy("high.toml", path.join(root, "etc/camera.d/presets", "high.toml"))
 
 for i in ["shutdown.lja", "shutdown.py"]:
     shutil.copy(i, path.join(root, "bin", i))
+
+shutil.copy("06-m5xuart.lja", path.join(root, "boot/boot.d", "06-m5xuart.lja"))
