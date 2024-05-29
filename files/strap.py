@@ -3,16 +3,16 @@ try:
 except FileExistsError:
     pass
 
-shutil.copy("config.toml", path.join(root, "etc/camera.d", "config.toml"))
+shutil.copyfile("config.toml", path.join(root, "etc/camera.d", "config.toml"))
 
 try:
     mkdir(path.join(root, "etc/camera.d/presets"))
 except FileExistsError:
     pass
 
-shutil.copy("high.toml", path.join(root, "etc/camera.d/presets", "high.toml"))
+shutil.copyfile("high.toml", path.join(root, "etc/camera.d/presets", "high.toml"))
 
 for i in ["shutdown.lja", "shutdown.py"]:
-    shutil.copy(i, path.join(root, "bin", i))
+    shutil.copyfile(i, path.join(root, "bin", i))
 
-shutil.copy("06-m5xuart.lja", path.join(root, "boot/boot.d", "06-m5xuart.lja"))
+shutil.copyfile("06-m5xuart.lja", path.join(root, "boot/boot.d", "06-m5xuart.lja"))
