@@ -1,8 +1,8 @@
 {
     "JPKG_minimum_version": 2,
     "package_name": "m5x-config",
-    "version": [1, 3, 0],
-    "dependencies": ["camera", "i2ctools"],
+    "version": [1, 4, 0],
+    "dependencies": ["camera", "i2ctools", "adctools"],
     "conflicts": ["esp32cam-config", "fbs3-config"],
     "install": "installer.py",
     "remove": "uninstaller.py",
